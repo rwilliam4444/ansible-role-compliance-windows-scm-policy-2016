@@ -1,0 +1,1 @@
+# ansible-role-compliance-windows-scm-policy-2016
