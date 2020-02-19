@@ -1,0 +1,20 @@
+---
+- block:
+  - debug:
+     msg:
+      - "{{ msg_string }} is Non-Compliant:"
+      - "{{ check_value }}"
+      - "The value should be:"
+      - "{{ check_against }}"
+  when: >
+    check_value != check_against
+
+- block:
+   - debug:
+      msg:
+       - "{{ msg_string }} is Compliant:"
+       - "{{ check_value }}"
+       - "It matches the following CIS value:"
+       - "{{ check_against }}"
+  when: >
+    check_value == check_against
